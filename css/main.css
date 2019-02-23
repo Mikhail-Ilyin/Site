@@ -4,7 +4,6 @@ body
 	padding: 0;
 	min-height: 1000px;
 	font-family: sans-serif;
-
 }
 
 header
@@ -22,12 +21,25 @@ header
 	box-sizing: border-box;
 }
 
+header.scrolled
+{
+	height: 100px;
+	justify-content: flex-end;
+}
+
 header .logo
 {
 	position: absolute;
 	top: calc(50% - 150px);
 	left: calc(50% - 150px);
 	transition: 1s;
+}
+
+header.scrolled .logo
+{
+	position: relative;
+	top: 0;
+	left: 0;
 }
 
 header img.banner
@@ -43,9 +55,12 @@ header img.banner
 
 header .logo img
 {
+	object-fit: cover;
+	top: 20px;
 	width: 300px;
+	height: 300px;
 	transition: 1s;
-
+	border-radius: 50%;
 }
 
 nav
@@ -58,9 +73,12 @@ nav ul
 {
 	position: relative;
 	margin: 0;
-	padding: 40px 0;
+	padding: 40px 0;	 
 	display: flex;
 	transition: 1s;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(100px);
 }
 
 nav ul li
@@ -70,7 +88,7 @@ nav ul li
 
 nav ul li a
 {
-	color: #fff;
+	color: #555; /*Color of nav menu*/ 
 	padding: 10px 15px;
 	text-decoration: none;
 }
@@ -79,5 +97,4 @@ nav ul li a.active
 {
 	background: #fff;
 	color: #262626;
-
 }
