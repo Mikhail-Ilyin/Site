@@ -3,7 +3,8 @@ body
 	margin: 0;
 	padding: 0;
 	min-height: 1000px;
-	
+	font-family: sans-serif;
+
 }
 
 header
@@ -26,6 +27,17 @@ header .logo
 	position: absolute;
 	top: calc(50% - 150px);
 	left: calc(50% - 150px);
+	transition: 1s;
+}
+
+header img.banner
+{
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
 	transition: 1s;
 }
 
@@ -61,4 +73,11 @@ nav ul li a
 	color: #fff;
 	padding: 10px 15px;
 	text-decoration: none;
+}
+
+nav ul li a.active
+{
+	background: #fff;
+	color: #262626;
+
 }
